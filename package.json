@@ -1,0 +1,39 @@
+{
+	"name": "marketplace",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"prebuild": "if exist dist rmdir /s /q dist",
+		"build": "tsc --build && resolve-tspaths",
+		"dev": "nodemon",
+		"start:dev": "ts-node -P ./tsconfig.json src/index.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@types/express": "^5.0.1",
+		"@types/jest": "^29.5.14",
+		"@types/node": "^22.15.2",
+		"@types/sinon": "^17.0.4",
+		"express": "^5.1.0",
+		"nodemon": "^3.1.10",
+		"resolve-tspaths": "^0.8.23",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"dotenv": "^16.5.0",
+		"joi": "^17.13.3",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.13.3",
+		"reflect-metadata": "^0.2.2",
+		"tsconfig-paths": "^4.2.0",
+		"typeorm": "^0.3.22",
+		"winston": "^3.17.0",
+		"winston-daily-rotate-file": "^5.0.0",
+		"zod": "^3.24.3"
+	}
+}
